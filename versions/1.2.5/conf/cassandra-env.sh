@@ -178,6 +178,7 @@ fi
 
 [ -z "$XMS" ] && { XMS=32M; }
 [ -z "$XMN" ] && { XMN=30M; }
+[ -z "$GC" ] && { GC="-XX:+UseParNewGC"; }
 memory_total=`free -m | grep Mem | awk '{print $2}'`;
 [ -z "$XMX" ] && { let XMX=memory_total-35; XMX="${XMX}M"; }
 
